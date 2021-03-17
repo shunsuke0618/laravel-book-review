@@ -21,11 +21,11 @@
 			@endif
 				</aside>
 			</div>
-			<form method="post" action="/review/delete/{{$review->id}}">
+				<form method="post" action="/review/delete/{{$review->id}}" class="center">
 				{{ csrf_field() }}
-				<input type="submit" value="削除" class="btn btn-danger btn-sm">
-			</form>
-			<a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
+				<input type="submit" value="削除" class="btn btn-danger btn-back mb20">
+				<a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
+				</form>
 		</div>
 	</div>
 @endsection
