@@ -46,4 +46,10 @@ class ReviewController extends Controller
         
         return redirect('/')->with('flash_message', '投稿が完了しました');
     }
+    
+    public function delete(Request $request)
+    {
+        Review::find($request->id)->delete();
+        return redirect('/')->with('flash_message', '削除が完了しました');
+    }
 }
